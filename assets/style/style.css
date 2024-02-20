@@ -270,13 +270,13 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin: 1rem 1rem 1rem 1rem;
-  border-radius: 1rem;
+  margin: 1rem 2rem 1rem 1rem;
+  border-radius: 0.5rem;
 }
 .theme-02 .calc-buttons .buttons-row {
   display: flex;
   justify-content: space-around;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 0.5rem 1rem;
 }
 .theme-02 .calc-buttons .buttons-row input {
   display: flex;
@@ -288,11 +288,11 @@ body {
   font-size: 2rem;
   padding-top: 0.4rem;
   outline: 0;
-  width: 5rem;
-  height: 3.5rem;
+  width: 5.5rem;
+  height: 4rem;
   background-color: hsl(45, 7%, 89%);
   color: hsl(60, 10%, 19%);
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   border-bottom: 4px solid hsl(35, 11%, 61%);
 }
 .theme-02 .calc-buttons .buttons-row .button:active {
@@ -313,6 +313,7 @@ body {
   text-transform: uppercase;
   font-size: 1.5rem;
   border-bottom: 5px solid hsl(185, 58%, 25%);
+  margin: 0 0 0.8rem 0;
 }
 .theme-02 .calc-buttons .buttons-row #equal {
   width: 12rem;
@@ -321,6 +322,7 @@ body {
   font-size: 1.5rem;
   border-bottom: 5px solid hsl(25, 99%, 27%);
   color: hsl(60, 10%, 19%);
+  margin: 0 0 0.8rem 0;
 }
 
 .theme-03 {
@@ -422,13 +424,13 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin: 1rem 1rem 1rem 1rem;
-  border-radius: 1rem;
+  margin: 1rem 2rem 1rem 1rem;
+  border-radius: 0.5rem;
 }
 .theme-03 .calc-buttons .buttons-row {
   display: flex;
   justify-content: space-around;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 0.5rem 1rem;
 }
 .theme-03 .calc-buttons .buttons-row input {
   display: flex;
@@ -440,11 +442,11 @@ body {
   font-size: 2rem;
   padding-top: 0.4rem;
   outline: 0;
-  width: 5rem;
-  height: 3.5rem;
+  width: 5.5rem;
+  height: 4rem;
   background-color: hsl(281, 89%, 26%);
   color: hsl(52, 100%, 62%);
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   border-bottom: 4px solid hsl(285, 91%, 52%);
 }
 .theme-03 .calc-buttons .buttons-row .button:active {
@@ -465,6 +467,7 @@ body {
   text-transform: uppercase;
   font-size: 1.5rem;
   border-bottom: 5px solid hsl(285, 91%, 52%);
+  margin: 0 0 0.8rem 0;
 }
 .theme-03 .calc-buttons .buttons-row #equal {
   width: 12rem;
@@ -473,4 +476,5 @@ body {
   font-size: 1.5rem;
   border-bottom: 5px solid hsl(177, 92%, 70%);
   color: hsl(52, 100%, 62%);
+  margin: 0 0 0.8rem 0;
 }/*# sourceMappingURL=style.css.map */
