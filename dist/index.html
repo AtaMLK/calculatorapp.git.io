@@ -1,1 +1,67 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/index.368984f8.css"><title>Calculator app</title></head><body> <div id="calculator" class="theme-01">  <div class="top-section"> <h4 class="name">calc</h4> <div class="toggle-section"> <span>Theme</span> <div class="theme-toggle"> <span class="toggle-ball"></span> <span class="theme-1">1</span> <span class="theme-2">2</span> <span class="theme-3">3</span> </div> </div> </div> <div class="calc-monitor"> <input type="text" placeholder="399.658" name="display-monitor" id="display-monitor"> </div> <div class="calc-buttons"> <div class="buttons-row"> <input type="button" class="button" name="b7" value="7" onclick="addToCalculator(value)"> <input type="button" class="button" name="b8" value="8" onclick="addToCalculator(value)"> <input type="button" class="button" name="b9" value="9" onclick="addToCalculator(value)"> <input type="button" class="button" name="del" value="del" onclick="deleteLast()"> </div> <ul class="buttons-row"> <input type="button" class="button" name="b4" value="4" onclick="addToCalculator(value)"> <input type="button" class="button" name="b5" value="5" onclick="addToCalculator(value)"> <input type="button" class="button" name="b6" value="6" onclick="addToCalculator(value)"> <input type="button" class="button" name="plus" value="+" onclick="addToCalculator(value)"> </ul> <ul class="buttons-row"> <input type="button" class="button" name="b1" value="1" onclick="addToCalculator(value)"> <input type="button" class="button" name="b2" value="2" onclick="addToCalculator(value)"> <input type="button" class="button" name="b3" value="3" onclick="addToCalculator(value)"> <input type="button" class="button" name="mines" value="-" onclick="addToCalculator(value)"> </ul> <ul class="buttons-row"> <input type="button" class="button" name="b" value="." onclick="addToCalculator(value)"> <input type="button" class="button" name="b0" value="0" onclick="addToCalculator(value)"> <input type="button" class="button" name="div" value="/" onclick="addToCalculator(value)"> <input type="button" class="button" name="mul" value="*" onclick="addToCalculator(value)"> </ul> <ul class="buttons-row"> <input type="button" class="button" id="reset" name="res" value="Ce" onclick="resetAll()"> <input type="button" class="button" id="equal" name="eq" value="=" onclick="equalTo()"> </ul> </div> </div> <script src="/index.46d9b970.js"></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="/index.608029e9.css">
+  <title>Calculator app</title>
+</head>
+
+<body>
+  <div id="calculator" class="theme-01">
+    <!--  theme section -->
+    <div class="top-section">
+      <h4 class="name">calc</h4>
+      <div class="toggle-section">
+        <span>Theme</span>
+        <div class="theme-toggle">
+          <span class="toggle-ball"></span>
+          <span class="theme-1">1</span>
+          <span class="theme-2">2</span>
+          <span class="theme-3">3</span>
+        </div>
+      </div>
+    </div>
+    <div class="calc-monitor">
+      <input type="text" placeholder="399.658" name="display-monitor" id="display-monitor">
+    </div>
+    <div class="calc-buttons">
+      <div class="buttons-row">
+        <input type="button" class="button" name="b7" value="7" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="b8" value="8" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="b9" value="9" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="del" value="del" onclick="deleteLast()">
+      </div>
+      <ul class="buttons-row">
+        <input type="button" class="button" name="b4" value="4" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="b5" value="5" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="b6" value="6" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="plus" value="+" onclick="addToCalculator(value)">
+      </ul>
+      <ul class="buttons-row">
+        <input type="button" class="button" name="b1" value="1" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="b2" value="2" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="b3" value="3" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="mines" value="-" onclick="addToCalculator(value)">
+      </ul>
+      <ul class="buttons-row">
+        <input type="button" class="button" name="b" value="." onclick="addToCalculator(value)">
+        <input type="button" class="button" name="b0" value="0" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="div" value="/" onclick="addToCalculator(value)">
+        <input type="button" class="button" name="mul" value="*" onclick="addToCalculator(value)">
+      </ul>
+      <ul class="buttons-row">
+        <input type="button" class="button" id="reset" name="res" value="Ce" onclick="resetAll()">
+        <input type="button" class="button" id="equal" name="eq" value="=" onclick="equalTo()">
+      </ul>
+    </div>
+  </div>
+
+
+  <script src="/index.c4775257.js"></script>
+<script src="/calculator-app-main.3464ddca.js"></script></body>
+
+</html>
