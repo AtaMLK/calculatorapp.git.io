@@ -98,6 +98,9 @@ body {
   border: 0;
   border-radius: 0.5rem;
 }
+.theme-01 .calc-monitor input::placeholder {
+  color: hsl(0, 0%, 100%);
+}
 .theme-01 .calc-monitor input:active, .theme-01 .calc-monitor input:focus {
   border: none;
   outline: none;
@@ -114,13 +117,13 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin: 1rem 1rem 1rem 1rem;
-  border-radius: 1rem;
+  margin: 1rem 2rem 1rem 1rem;
+  border-radius: 0.5rem;
 }
 .theme-01 .calc-buttons .buttons-row {
   display: flex;
   justify-content: space-around;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 0.5rem 1rem;
 }
 .theme-01 .calc-buttons .buttons-row input {
   display: flex;
@@ -132,11 +135,11 @@ body {
   font-size: 2rem;
   padding-top: 0.4rem;
   outline: 0;
-  width: 5rem;
-  height: 3.5rem;
+  width: 5.5rem;
+  height: 4rem;
   background-color: hsl(30, 25%, 89%);
   color: hsl(221, 14%, 31%);
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   border-bottom: 4px solid hsl(28, 16%, 65%);
 }
 .theme-01 .calc-buttons .buttons-row .button:active {
@@ -157,6 +160,7 @@ body {
   text-transform: uppercase;
   font-size: 1.5rem;
   border-bottom: 5px solid hsl(224, 28%, 35%);
+  margin: 0 0 0.8rem 0;
 }
 .theme-01 .calc-buttons .buttons-row #equal {
   width: 12rem;
