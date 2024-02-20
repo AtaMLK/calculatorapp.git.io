@@ -8,6 +8,14 @@ $Main-background-color-1: hsl(222, 26%, 31%);
 $Keypad-background-color-1: hsl(223, 31%, 20%);
 $Screen-background-color-1: hsl(224, 36%, 15%);
 
+$Main-background-color-2: hsl(0, 0%, 90%);
+$Keypad-background-color-2: hsl(0, 5%, 81%);
+$Screen-background-color-2: hsl(0, 0%, 93%);
+
+$Main-background-color-3: hsl(268, 75%, 9%);
+$Keypad-background-color-3: hsl(268, 71%, 12%);
+$Screen-background-color-3: hsl(268, 71%, 12%);
+
 //theme1-key-colors
 $allKey-background-color-1: hsl(30, 25%, 89%);
 $allKey-shadow-color-1: hsl(28, 16%, 65%);
@@ -17,8 +25,26 @@ $resetlKey-background-color-1: hsl(225, 21%, 49%);
 $resetKey-shadow-color-1: hsl(224, 28%, 35%);
 $allKey-text-color-1: hsl(221, 14%, 31%);
 
+$allKey-background-color-2: hsl(45, 7%, 89%);
+$allKey-shadow-color-2: hsl(35, 11%, 61%);
+$equalKey-background-color-2: hsl(25, 98%, 40%);
+$equalKey-shadow-color-2: hsl(25, 99%, 27%);
+$resetlKey-background-color-2: hsl(185, 42%, 37%);
+$resetKey-shadow-color-2: hsl(185, 58%, 25%);
+$allKey-text-color-2: hsl(60, 10%, 19%);
+
+$allKey-background-color-3: hsl(281, 89%, 26%);
+$allKey-shadow-color-3: hsl(285, 91%, 52%);
+$equalKey-background-color-3: hsl(176, 100%, 44%);
+$equalKey-shadow-color-3: hsl(177, 92%, 70%);
+$resetlKey-background-color-3: hsl(290, 70%, 36%);
+$resetKey-shadow-color-3: hsl(285, 91%, 52%);
+$allKey-text-color-3: hsl(60, 10%, 19%);
+
 //theme1-text-color
 $text-color1: hsl(0, 0%, 100%);
+$text-color2: hsl(60, 10%, 19%);
+$text-color3: hsl(52, 100%, 62%);
 $font-family: "League Spartan", sans-serif;
 
 @mixin flex($display: flex, $justify-content: center, $align-items: center) {
@@ -52,11 +78,12 @@ body {
   margin: auto;
 }
 
-#calculator {
+.theme-01 {
   width: 90rem;
   height: 100vh;
   @include flex();
   flex-direction: column;
+  color: $text-color1;
 
   .top-section {
     @include flex(flex, space-between, null);
@@ -77,6 +104,8 @@ body {
         margin-right: 4rem;
       }
       .theme-toggle {
+        cursor: pointer;
+        cursor: pointer;
         display: inline-block;
         width: 3rem;
         height: 1.1rem;
@@ -190,6 +219,302 @@ body {
         font-size: $font-size - 0.5rem;
         @include border-bottom(5px, solid, $equalKey-shadow-color-1);
         color: $text-color1;
+      }
+    }
+  }
+}
+
+.theme-02 {
+  width: 90rem;
+  height: 100vh;
+  @include flex();
+  flex-direction: column;
+  color: $text-color2;
+
+  .top-section {
+    @include flex(flex, space-between, null);
+    width: 28rem;
+    @include margin-padding(1rem, 2rem, 1rem, 2rem);
+    position: relative;
+    h4 {
+      font-size: $font-size - 0.5rem;
+      @include margin-padding(1rem, 0, 0, 0);
+    }
+    .toggle-section {
+      position: relative;
+      span {
+        font-size: $font-size - 1.4rem;
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        margin-right: 4rem;
+      }
+      .theme-toggle {
+        cursor: pointer;
+        display: inline-block;
+        width: 3rem;
+        height: 1.1rem;
+        background-color: $Keypad-background-color-2;
+        border-radius: 1rem;
+        position: absolute;
+        top: 0.7rem;
+        right: 0;
+        .toggle-ball {
+          width: 0.7rem;
+          height: 0.7rem;
+          border-radius: 1rem;
+          background-color: $equalKey-background-color-2;
+          top: -0.5rem;
+          right: -0.2rem;
+        }
+        .theme-1 {
+          position: absolute;
+          top: -1rem;
+          right: -1.5rem;
+        }
+        .theme-2 {
+          position: absolute;
+          top: -1rem;
+          right: -2.6rem;
+        }
+        .theme-3 {
+          position: absolute;
+          top: -1rem;
+          right: -3.7rem;
+        }
+      }
+    }
+  }
+  .calc-monitor {
+    display: block;
+    input {
+      @include margin-padding(0, 1rem, 0, 0, true);
+      text-align: right;
+      font-size: $font-size + 0.2rem;
+      font-family: $font-family;
+      color: $text-color2;
+      width: 28rem;
+      height: 5.5rem;
+      background-color: $Screen-background-color-2;
+      border: 0;
+      border-radius: 0.5rem;
+      &::placeholder{
+        color: $text-color2;
+      }
+      &:active,
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  .calc-buttons {
+    background-color: $Keypad-background-color-2;
+    width: 28rem;
+    height: 28rem;
+    outline: none;
+    @include flex(flex, space-between, null);
+    flex-direction: column;
+    @include margin-padding(1rem, 1rem, 1rem, 1rem);
+    border-radius: 1rem;
+    .buttons-row {
+      @include flex(flex, space-around, null);
+      @include margin-padding(1rem, 1rem, 1rem, 1rem);
+      input {
+        @include flex(flex, center, center);
+        text-align: center;
+        border: 0;
+        font-family: $font-family;
+        font-size: $font-size;
+        padding-top: 0.4rem;
+        outline: 0;
+        width: 5rem;
+        height: 3.5rem;
+        background-color: $allKey-background-color-2;
+        color: $allKey-text-color-2;
+        border-radius: 1rem;
+        @include border-bottom(4px, solid, $allKey-shadow-color-2);
+      }
+      .button:active {
+        transform: scale(0.9);
+        border-bottom: 0;
+      }
+
+      #delet {
+        background-color: $resetlKey-background-color-2;
+        color: $text-color2;
+        text-transform: uppercase;
+        font-size: $font-size - 0.5rem;
+        @include border-bottom(5px, solid, $resetKey-shadow-color-2);
+      }
+      #reset {
+        width: 12rem;
+        background-color: $resetlKey-background-color-2;
+        color: $text-color2;
+        text-transform: uppercase;
+        font-size: $font-size - 0.5rem;
+        @include border-bottom(5px, solid, $resetKey-shadow-color-2);
+      }
+      #equal {
+        width: 12rem;
+        background-color: $equalKey-background-color-2;
+        text-transform: uppercase;
+        font-size: $font-size - 0.5rem;
+        @include border-bottom(5px, solid, $equalKey-shadow-color-2);
+        color: $text-color2;
+      }
+    }
+  }
+}
+
+.theme-03 {
+  width: 90rem;
+  height: 100vh;
+  @include flex();
+  flex-direction: column;
+  color: $text-color3;
+
+  .top-section {
+    @include flex(flex, space-between, null);
+    width: 28rem;
+    @include margin-padding(1rem, 2rem, 1rem, 2rem);
+    position: relative;
+    h4 {
+      font-size: $font-size - 0.5rem;
+      @include margin-padding(1rem, 0, 0, 0);
+    }
+    .toggle-section {
+      position: relative;
+      span {
+        font-size: $font-size - 1.4rem;
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        margin-right: 4rem;
+      }
+      .theme-toggle {
+        cursor: pointer;
+        display: inline-block;
+        width: 3rem;
+        height: 1.1rem;
+        background-color: $Keypad-background-color-3;
+        border-radius: 1rem;
+        position: absolute;
+        top: 0.7rem;
+        right: 0;
+        .toggle-ball {
+          width: 0.7rem;
+          height: 0.7rem;
+          border-radius: 1rem;
+          background-color: $equalKey-background-color-3;
+          top: -0.5rem;
+          right: -0.2rem;
+        }
+        .theme-1 {
+          position: absolute;
+          top: -1rem;
+          right: -1.5rem;
+        }
+        .theme-2 {
+          position: absolute;
+          top: -1rem;
+          right: -2.6rem;
+        }
+        .theme-3 {
+          position: absolute;
+          top: -1rem;
+          right: -3.7rem;
+        }
+      }
+    }
+  }
+  .calc-monitor {
+    display: block;
+    input {
+      @include margin-padding(0, 1rem, 0, 0, true);
+      text-align: right;
+      font-size: $font-size + 0.2rem;
+      font-family: $font-family;
+      color: $text-color3;
+      width: 28rem;
+      height: 5.5rem;
+      background-color: $Screen-background-color-3;
+      border: 0;
+      border-radius: 0.5rem;
+      &::placeholder{
+        color: $text-color3;
+      }
+      &:active,
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  .calc-buttons {
+    background-color: $Keypad-background-color-3;
+    width: 28rem;
+    height: 28rem;
+    outline: none;
+    @include flex(flex, space-between, null);
+    flex-direction: column;
+    @include margin-padding(1rem, 1rem, 1rem, 1rem);
+    border-radius: 1rem;
+    .buttons-row {
+      @include flex(flex, space-around, null);
+      @include margin-padding(1rem, 1rem, 1rem, 1rem);
+      input {
+        @include flex(flex, center, center);
+        text-align: center;
+        border: 0;
+        font-family: $font-family;
+        font-size: $font-size;
+        padding-top: 0.4rem;
+        outline: 0;
+        width: 5rem;
+        height: 3.5rem;
+        background-color: $allKey-background-color-3;
+        color: $text-color3;
+        border-radius: 1rem;
+        @include border-bottom(4px, solid, $allKey-shadow-color-3);
+      }
+      .button:active {
+        transform: scale(0.9);
+        border-bottom: 0;
+      }
+
+      #delet {
+        background-color: $resetlKey-background-color-3;
+        color: $text-color3;
+        text-transform: uppercase;
+        font-size: $font-size - 0.5rem;
+        @include border-bottom(5px, solid, $resetKey-shadow-color-3);
+      }
+      #reset {
+        width: 12rem;
+        background-color: $resetlKey-background-color-3;
+        color: $text-color3;
+        text-transform: uppercase;
+        font-size: $font-size - 0.5rem;
+        @include border-bottom(5px, solid, $resetKey-shadow-color-3);
+      }
+      #equal {
+        width: 12rem;
+        background-color: $equalKey-background-color-3;
+        text-transform: uppercase;
+        font-size: $font-size - 0.5rem;
+        @include border-bottom(5px, solid, $equalKey-shadow-color-3);
+        color: $text-color3;
       }
     }
   }
